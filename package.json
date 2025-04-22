@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "install": "node install.js",
     "start": "nodemon server.js"
   },
   "keywords": [],
@@ -12,5 +13,10 @@
   "type": "commonjs",
   "devDependencies": {
     "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
   }
 }
