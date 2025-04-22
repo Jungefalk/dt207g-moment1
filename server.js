@@ -18,15 +18,20 @@ app.set("view engine", "ejs");         //views
 app.use(express.static("public"));     //public
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//Routings
+//Routing
 app.get("/", (req, res) => {
-    res.render("index")
+    res.render("index");
 });
 
 app.get("/form", (req, res)=>{
-    res.render("form")
+    res.render("form");
 });
 
 app.get("/about", (req, res)=>{
-    res.render("about")
+    res.render("about");
+});
+
+//Starta applikation
+app.listen(port, ()=>{
+    console.log("Applikationen har startat på port: " + port);
 });
