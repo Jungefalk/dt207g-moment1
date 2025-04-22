@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body {
+    background-color: #D2665A;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+header,
+footer {
+    background-color: #F2B28C;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+header {
+    margin-bottom: 2em;
+}
+
+footer {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+main {
+    background-color: #F6DED8;
+    padding: 1em;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    background-color: #f6ded860;
+    padding: 1em;
+    margin-bottom: -3px;
+    font-size: 1.2em;
+    transition: background-color 0.4s ease;
+}
+
+.current {
+    background-color: #F6DED8;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li:hover {
+    background-color: #f6ded8b7;
+}
+
+.nav-left {
+    border-top-left-radius: 3px;
+}
+
+.nav-right {
+    border-top-right-radius: 3px;
+}
+
+form{
+    padding-bottom: 1em;
+}
+
+input{
+    width: 70%;
+    height: 25px;
+    margin: 0.3em;
+}
+
+label{
+    margin: 0.3em;
+}
