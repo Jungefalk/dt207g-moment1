@@ -36,13 +36,13 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-ul {
+nav ul {
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-li {
+nav ul li {
     list-style-type: none;
     background-color: #f6ded860;
     padding: 1em;
@@ -106,4 +106,8 @@ button:hover{
     box-shadow: none;
     text-decoration: underline 2px;
     cursor: pointer;
+}
+
+.error{
+    color: red;
 }
