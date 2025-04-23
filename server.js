@@ -57,10 +57,25 @@ app.post("/form", (req, res) => {
         progression.toLowerCase() != "a" &&
         progression.toLowerCase() != "b" &&
         progression.toLowerCase() != "c") {
-        errors.push("Fyll i korrekt värde för progression. A, B eller C")
+        errors.push("Fyll i korrekt värde för progression. A, B eller C.")
     };
     if (syllabus === "") {
         errors.push("Fyll i länk till kursplan")
+    };
+
+    //Kolla att det inte finns några felmeddelanden
+    if (errors.length === 0) {
+
+        //lagra i databas
+        const stmt = db.prepare("INSERT INTO course(coursecode, course_name, progression, syllabus)VALUES(?, ?, ?, ?);");
+        stmt.run(coursecode, course_name, progression, syllabus);
+        stmt.finalize();
+
+        //Töm inputfälten
+        coursecode = "";
+        course_name = "";
+        progression = "";
+        syllabus = "";
     };
 
     res.render("form", {
