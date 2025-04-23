@@ -20,13 +20,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Routing
 app.get("/", (req, res) => {
-    res.render("index", {
-        error: ""
-    });
+    res.render("index")
 });
 
 app.get("/form", (req, res) => {
-    res.render("form");
+    res.render("form", {
+        errors: []
+    });
 });
 
 //Ta emot formulärdata
@@ -37,13 +37,31 @@ app.post("/form", (req, res) => {
     let coursename = req.body.course_name;
     let progression = req.body.progression;
     let syllabus = req.body.syllabus;
-    let error = "";
+    let errors = [];
 
-    console.log(coursecode, coursename, progression, syllabus)
-    
+    //kontrollera att input är korrekt i fyllt
+    if (coursecode === "") {
+        errors.push("Fyll i fältet för kurskod")
+    }
+    if (coursename === "") {
+        errors.push("Fyll i fältet för kursnamn")
+    };
+    if (progression === "") {
+        errors.push("Fyll i fältet för progression")
+    };
+    if (progression != "" && 
+        progression.toLowerCase() != "a" &&
+        progression.toLowerCase() != "b" &&
+        progression.toLowerCase() != "c") {
+        errors.push("Fyll i korrekt värde för progression. A, B eller C")
+    };
+    if (syllabus === "") {
+        errors.push("Fyll i länk till kursplan")
+    };
+
     res.render("form", {
-        error: error
-    })
+        errors: errors
+    });
 });
 
 app.get("/about", (req, res) => {

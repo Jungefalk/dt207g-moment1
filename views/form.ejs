@@ -22,6 +22,17 @@
         </nav>
         <main>
             <h2>Lägg till kurs</h2>
+
+            <% if( locals.errors.length > 0) { %>
+                <ul>
+                    <% errors.forEach((error)=> { %>
+                        <li>
+                            <%=error%>
+                        </li>
+                        <% }); %>
+                </ul>
+                <% }; %>
+
             <form method="post">
                 <label for="coursecode">Kurskod:</label>
                 <br>
