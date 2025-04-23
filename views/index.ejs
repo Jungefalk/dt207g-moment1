@@ -22,6 +22,35 @@
         </nav>
         <main>
             <h2>Mina Kurser</h2>
+            <table>
+                <tr>
+                    <th>Kurskod</th>
+                    <th>Kursnamn</th>
+                    <th>Progression</th>
+                    <th>Kursplan</th>
+                </tr>
+
+                <% if(locals.rows.length> 0){%>
+                    <% locals.rows.forEach((course)=> { %>
+                        <tr>
+                            <td>
+                                <%= course.coursecode %>
+                            </td>
+                            <td>
+                                <%= course.course_name %>
+                            </td>
+                            <td>
+                                <%= course.progression %>
+                            </td>
+                            <td>
+                                <%= course.syllabus %>
+                            </td>
+                        </tr>
+
+                        <% }) %>
+                            <% } %>
+            </table>
+
         </main>
         <footer>
             <p>DT207G Datateknik GR (B), Backend-baserad webbutveckling - Mittuniversitetet</p>

@@ -20,7 +20,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Routing
 app.get("/", (req, res) => {
-    res.render("index")
+
+    //läs ut data från databasen
+    db.all("SELECT * FROM course;", (err, rows) => {
+        if (err) {
+            console.error(err.message)
+        };
+
+        res.render("index", {
+            rows: rows
+        });
+
+    });
 });
 
 app.get("/form", (req, res) => {
@@ -76,6 +87,9 @@ app.post("/form", (req, res) => {
         course_name = "";
         progression = "";
         syllabus = "";
+
+        //Skicka användare till startsidan
+        return res.redirect("/");
     };
 
     res.render("form", {
