@@ -20,18 +20,37 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Routing
 app.get("/", (req, res) => {
-    res.render("index");
+    res.render("index", {
+        error: ""
+    });
 });
 
-app.get("/form", (req, res)=>{
+app.get("/form", (req, res) => {
     res.render("form");
 });
 
-app.get("/about", (req, res)=>{
+//Ta emot formulärdata
+app.post("/form", (req, res) => {
+
+    //läs in formulärdata
+    let coursecode = req.body.coursecode;
+    let coursename = req.body.course_name;
+    let progression = req.body.progression;
+    let syllabus = req.body.syllabus;
+    let error = "";
+
+    console.log(coursecode, coursename, progression, syllabus)
+    
+    res.render("form", {
+        error: error
+    })
+});
+
+app.get("/about", (req, res) => {
     res.render("about");
 });
 
 //Starta applikation
-app.listen(port, ()=>{
+app.listen(port, () => {
     console.log("Applikationen har startat på port: " + port);
 });
