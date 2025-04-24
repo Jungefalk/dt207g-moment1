@@ -24,5 +24,11 @@ db.serialize(() => {
         `);
 });
 
+//Lägg till fördefinerade kurser i listan
+const stmt = db.prepare("INSERT INTO course(coursecode, course_name, progression, syllabus)VALUES(?, ?, ?, ?);");
+        stmt.run("DT207G", "Backend-baserad webbutveckling", "B", "https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/DT207G/");
+        stmt.run("DT211G", "Frontend-baserad webbutveckling", "B", "https://www.miun.se/utbildning/kursplaner-och-utbildningsplaner/DT211G/");
+        stmt.finalize();
+
 //Stäng databas
 db.close();
