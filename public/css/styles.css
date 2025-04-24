@@ -111,7 +111,7 @@ button:hover,
     cursor: pointer;
 }
 
-.button{
+.button {
     margin-left: 15px;
 }
 
@@ -135,7 +135,8 @@ td {
     border-collapse: collapse;
     padding: 0.5em;
     margin: 0.5em;
-    min-width: 97%;
+    max-width: 100%;
+    box-sizing: border-box;
 
 }
 
@@ -147,11 +148,74 @@ td {
     background-color: #f2b18c85;
 }
 
-.about-container{
+.about-container {
     background-color: rgb(243, 243, 243);
     padding: 0.1em 1em 0.1em 1em;
     margin: 1em;
     border-radius: 3px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.107);
+
+}
+
+@media (max-width: 450px) {
+
+
+    h2 {
+        font-size: 1em;
+    }
+
+    nav ul li {
+        font-size: 0.5em;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+
+    table {
+        margin-left: -20px;
+        border: 5px;
+    }
+
+    th,
+    td {
+        font-size: 9px;
+        padding: 3px;
+    }
+
+    .button a {
+        font-size: 9px;
+    }
+
+
+}
+
+@media (min-width: 451px) and (max-width: 600px) {
+
+    th,
+    td {
+        font-size: 9px;
+    }
+
+    .button a {
+        font-size: 0.7em;
+    }
+
+    nav ul li {
+        font-size: 1em;
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+
+    th,
+    td {
+        font-size: 13px;
+    }
+
+    .button a {
+        font-size: 0.7em;
+    }
 
 }
