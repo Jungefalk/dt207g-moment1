@@ -101,8 +101,8 @@ app.post("/form", (req, res) => {
     });
 });
 
+//Route för att rensa databasen från kurser
 app.get("/delete", (req, res) => {
-    
     db.run("DELETE FROM course", (err) => {
         if (err){
             console.error(err);
