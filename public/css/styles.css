@@ -181,6 +181,7 @@ td {
     td {
         font-size: 9px;
         padding: 3px;
+        line-height: 1.2;
     }
 
     .button a {
@@ -195,6 +196,7 @@ td {
     th,
     td {
         font-size: 9px;
+        line-height: 1.4;
     }
 
     .button a {
