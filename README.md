@@ -1,6 +1,6 @@
 ## Moment 1 - DT207G
 
-Denna sida är en serverbaserad webbapplikation byggd med express och NodeJs. Syftet med
+Detta är en serverbaserad webbapplikation byggd med express och NodeJs. Syftet med
 applikationen är att kunna lägga till kurser via ett formulär som kontrollerar att inmatningen är
 korrekt. Är inmatningen korrekt hämtas den inmatade datan från formuläret och lagras i en
 databasserver. Databasservern som har använts för detta projekt är sqlite3. Den lagrade datan
