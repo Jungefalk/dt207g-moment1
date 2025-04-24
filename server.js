@@ -101,6 +101,18 @@ app.post("/form", (req, res) => {
     });
 });
 
+app.get("/delete", (req, res) => {
+    
+    db.run("DELETE FROM course", (err) => {
+        if (err){
+            console.error(err);
+        }
+
+        res.redirect("/");
+});
+
+});
+
 app.get("/about", (req, res) => {
     res.render("about");
 });

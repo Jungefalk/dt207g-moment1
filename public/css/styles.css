@@ -90,7 +90,8 @@ label {
     margin: 0.3em;
 }
 
-button {
+button,
+.button {
     margin: 0.3em;
     margin-top: 1em;
     width: 20%;
@@ -102,10 +103,23 @@ button {
     font-size: 1em;
 }
 
-button:hover {
+button:hover,
+.button:hover {
     box-shadow: none;
     text-decoration: underline 2px;
     cursor: pointer;
+}
+
+.button{
+    margin-left: 15px;
+}
+
+.button a {
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+    color: #000000;
+    text-decoration: none;
 }
 
 .error {
@@ -120,10 +134,11 @@ td {
     border-collapse: collapse;
     padding: 0.5em;
     margin: 0.5em;
-    
+    min-width: 97%;
+
 }
 
-th{
+th {
     background-color: #F2B28C;
 }
 

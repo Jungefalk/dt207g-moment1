@@ -43,13 +43,15 @@
                                 <%= course.progression %>
                             </td>
                             <td>
-                                <a href="<%= course.syllabs%>"><%= course.syllabus %></a>
+                                <a href="<%= course.syllabs%>">
+                                    <%= course.syllabus %>
+                                </a>
                             </td>
                         </tr>
-
                         <% }) %>
                             <% } %>
             </table>
+            <p class="button"><a href="/delete">Rensa tabell</a></p>
 
         </main>
         <footer>
