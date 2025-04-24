@@ -49,7 +49,11 @@
                             </td>
                         </tr>
                         <% }) %>
-                            <% } %>
+                            <% }else { %>
+                                <tr>
+                                    <td colspan="4">Det finns inga tillagda kurser i tabellen ännu</td>
+                                </tr>
+                            <%}%>
             </table>
             <p class="button"><a href="/delete">Rensa tabell</a></p>
 
