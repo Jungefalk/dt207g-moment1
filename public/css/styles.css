@@ -4,6 +4,7 @@ body {
     background-color: #D2665A;
     font-family: "Outfit", sans-serif;
     font-size: 1.2em;
+    line-height: 1.6em;
     margin: 0;
 }
 
@@ -144,4 +145,13 @@ th {
 
 td {
     background-color: #f2b18c85;
+}
+
+.about-container{
+    background-color: rgb(243, 243, 243);
+    padding: 0.1em 1em 0.1em 1em;
+    margin: 1em;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.107);
+
 }
